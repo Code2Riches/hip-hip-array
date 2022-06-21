@@ -25,7 +25,12 @@ const students = [
     'Andy'
   ];
   // Challenge 1 Code
-
+  let ctr = 0
+  while(ctr <13){
+  console.log(ctr + 1);
+  console.log(students[ctr]);
+  ctr++;
+  }
 
 
   console.log("\n");
@@ -34,9 +39,9 @@ const students = [
   // Loop through the following array BACKWARDS, console.logging out each value. 64 should be printed first and 100 last.
   const grades = [100, 80, 110, 75, 83, 64];
   //Challenge 2 Code
-
   
-
+  console.log(grades.reverse());
+  
 
   console.log("\n");
   console.log("Challenge 3");
@@ -44,7 +49,12 @@ const students = [
   // Console.log out only the even numbers in the following array.
   const positiveNumbers = [5, 2, 13, 17, 4, 102, 3000];
   // Challenge 3 Code
-
+  
+for (let i = 0; i < positiveNumbers.length; i++){
+  if (positiveNumbers[i] % 2 === 0){
+    console.log(positiveNumbers[i]);
+  }
+}
 
 
   console.log("\n");
@@ -55,7 +65,11 @@ const students = [
 
   // Challenge 4 Code
 
-
+  for (let i = 0; i < mixedSignNumbers.length; i++){
+    if (mixedSignNumbers[i] % 2 === 0){
+      console.log(mixedSignNumbers[i]);
+    }
+  }
 
   
   console.log("\n");
@@ -64,8 +78,12 @@ const students = [
   // Remove two values from the beginning and one value from the end of the following array, simply by deleting them in the following line. Then console.log out each value individually.
   const symmetricalCapitals = ['A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y'];
   // Challenge 5 Code
-    
 
+  console.log(symmetricalCapitals);
+  for (let i = 2; i < symmetricalCapitals.length-1; i++){
+    console.log(symmetricalCapitals[i]);
+  }
+  
 
   console.log("\n");
   console.log("Challenge 6");
@@ -74,8 +92,16 @@ const students = [
   const fibonacciNumbers = [1, 1, 2, 3, 5, 8, 13];
   // Challenge 6 Code
   
-  
 
+console.log(fibonacciNumbers);
+fibonacciNumbers.unshift(0);
+fibonacciNumbers.push(21);
+fibonacciNumbers.push(34);
+for (let i = 0; i < fibonacciNumbers.length; i++){
+  // console.log(fibonacciNumbers.unshift("0"));
+  console.log(fibonacciNumbers[i]);
+}
+  
 
   console.log("\n");
   console.log("Challenge 7");
@@ -84,8 +110,10 @@ const students = [
   const newArray = [1, 2, 3, 4, 5];
   // Challenge 7 Code
 
-
-
+console.log(newArray);
+for (let i = 0; i < newArray.length; i++){
+  console.log(newArray[i]);
+}
 
 
   console.log("\n");
@@ -95,6 +123,19 @@ const students = [
   const emptyArray = [];
   // Challenge 8 Code
 
+  emptyArray.unshift(1);
+  emptyArray.unshift(0);
+  emptyArray.push(2);
+  emptyArray.push(3);
+  emptyArray.push(4);
+
+  console.log(emptyArray);
+ 
+  for (let i = 0; i < emptyArray.length; i++){
+    console.log(emptyArray[i]);
+  }
+
+
 
 
 
@@ -103,6 +144,30 @@ const students = [
   // Challenge 9
   // Loop through the `students` array from Challenge 1, starting at index 3 and ending at index 10 (INCLUSIVE), logging out each value individually.
   // Challenge 9 Code
+
+  const students1 = [
+    'Tre',
+    'Sonny',
+    'Crystal',
+    'Ilyas',
+    'Greg',
+    'Fernando',
+    'Timothy',
+    'Patrick',
+    'Steve',
+    'Jimothy',
+    'Pat',
+    'Arnold',
+    'Andy'
+  ];
+
+  let ctr1 = 3
+  while(ctr1 <11){
+  console.log(ctr1 + 0);
+  console.log(students1[ctr1]);
+  ctr1++;
+  }
+
   
   
   console.log("\n");
@@ -112,6 +177,29 @@ const students = [
   // Do NOT use slice, you will be using that for the next challenge!
   // Challenge 10 Code
 
+//   const students2 = [
+//     'Tre',
+//     'Sonny',
+//     'Crystal',
+//     'Ilyas',
+//     'Greg',
+//     'Fernando',
+//     'Timothy',
+//     'Patrick',
+//     'Steve',
+//     'Jimothy',
+//     'Pat',
+//     'Arnold',
+//     'Andy'
+//   ];
+
+//  let students3 = students2;
+// let ctr2 = 3
+// while(ctr2 <11){
+// console.log(ctr2 + 0);
+// console.log(students2[ctr2]);
+// ctr2++;
+// }
 
 
 
@@ -121,9 +209,28 @@ const students = [
   // Make a COPY of the `students` array *using .slice*, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy individually. THEN log out each value of the original array. Notice that the original array didn't get any values taken out of it, because `slice` does NOT modify the original array.
   // Challenge 11 Code
   
+  const students4 = [
+    'Tre',
+    'Sonny',
+    'Crystal',
+    'Ilyas',
+    'Greg',
+    'Fernando',
+    'Timothy',
+    'Patrick',
+    'Steve',
+    'Jimothy',
+    'Pat',
+    'Arnold',
+    'Andy'
+  ];
 
-
-
+  students4.slice(3, 11)
+  for (let i = 3; i < students4.length-2; i++) {
+    console.log(students4[i])
+  }
+  
+  
   console.log("\n");
   console.log("Challenge 12");
   // Challenge 12
@@ -131,8 +238,11 @@ const students = [
   const dinosaurs = ['Velociraptor', 'T-Rex', 'Stegosaurus', 'Triceratops', 'Dimetrodon', 'Allosaur', 'Spinosaurus', 'Gigantosaur']
   // Challenge 12 Code
 
-  
-  
+  dinosaurs.splice(4, 3);
+  for (let i = 0; i < dinosaurs.length; i++) {
+    console.log(dinosaurs[i])
+  }
+
   
   console.log("\n");
   console.log("Challenge 13");
@@ -140,8 +250,7 @@ const students = [
   // Use .join to change the dinosaur strings from the above array into one string with a '*' string as the "separator". Then console.log out that string.
   // Challenge 13 Code
 
-
-
+  console.log(dinosaurs.join("*"));
   
   console.log("\n");
 
@@ -150,7 +259,7 @@ const students = [
   // Use .reverse to reverse the dinosaur array and then log out the original array. .reverse DOES change the original array.
   // Challenge 14 Code
 
-
+  console.log(dinosaurs.reverse());
 
   
   console.log("\n");
@@ -159,5 +268,12 @@ const students = [
   // Use .concat to combine the following two arrays into a NEW array you make (.concat RETURNS an array). Then console.log out each value of that new array individually. Now console.log both the primaries and secondaries arrays, noting that .concat does NOT mutate the original arrays.
   // Challenge 15 Code
 
+  const arr1 = ["Dog", "Cat"];
+  const arr2 = ["Bird"];
+  const arr3 = arr1.concat(arr2);
+
+  console.log(arr1);
+  console.log(arr2);
+  console.log(arr3);
 
   
