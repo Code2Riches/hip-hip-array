@@ -24,9 +24,9 @@ const students = [
     'Arnold',
     'Andy'
   ];
-  // Challenge 1 Code
+
   let ctr = 0
-  while(ctr <13){
+  while(ctr < students.length){
   console.log(ctr + 1);
   console.log(students[ctr]);
   ctr++;
@@ -41,6 +41,10 @@ const students = [
   //Challenge 2 Code
   
   console.log(grades.reverse());
+
+  for (let i = 0; i < grades.length; i++) {
+    console.log(grades[i])
+  }
   
 
   console.log("\n");
@@ -162,7 +166,7 @@ for (let i = 0; i < newArray.length; i++){
   ];
 
   let ctr1 = 3
-  while(ctr1 <11){
+  while(ctr1 < students1.length-2){
   console.log(ctr1 + 0);
   console.log(students1[ctr1]);
   ctr1++;
@@ -195,7 +199,7 @@ for (let i = 0; i < newArray.length; i++){
 
 //  let students3 = students2;
 // let ctr2 = 3
-// while(ctr2 <11){
+// while(ctr2 < students2.length-2){
 // console.log(ctr2 + 0);
 // console.log(students2[ctr2]);
 // ctr2++;
@@ -275,5 +279,9 @@ for (let i = 0; i < newArray.length; i++){
   console.log(arr1);
   console.log(arr2);
   console.log(arr3);
+
+  for (let i = 0; i < arr3.length; i++) {
+    console.log(arr3[i])
+  }
 
   
